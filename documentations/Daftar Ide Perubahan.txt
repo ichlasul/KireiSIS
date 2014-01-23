@@ -1,0 +1,5 @@
+1. Tema
+	Ubah tema ke yang lebih modern & user friendly. Disesuaikan dengan sekolah.
+2. Bahasa
+	Tambahkan fitur pemilihan Bahasa Indonesia.
+3. 
