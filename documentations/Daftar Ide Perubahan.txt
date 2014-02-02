@@ -1,7 +1,0 @@
-1. Tema
-	Ubah tema ke yang lebih modern & user friendly.
-	Disesuaikan dengan logo dan gaya sekolah.
-	Tombol terlalu kecil, tidak jelas kalau bisa didownload, dll.
-2. Bahasa
-	Tambahkan fitur pemilihan Bahasa Indonesia.
-3. Menghilangkan fitur yang tidak digunakan sekolah
