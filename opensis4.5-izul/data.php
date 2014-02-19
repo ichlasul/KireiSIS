@@ -1,3 +1,0 @@
-<?php 
-$DatabaseType = 'mysql'; 
-?>
