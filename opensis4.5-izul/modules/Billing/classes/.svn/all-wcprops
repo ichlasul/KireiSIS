@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/classes
+END
+Payment.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/classes/Payment.php
+END
+Fee.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/classes/Fee.php
+END
+PaymentType.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/classes/PaymentType.php
+END
+Auth.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/classes/Auth.php
+END
+Student.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/classes/Student.php
+END

@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax
+END
+waiveFee.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/waiveFee.php
+END
+addMassFee.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/addMassFee.php
+END
+searchStudents.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/searchStudents.php
+END
+getPayments.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/getPayments.php
+END
+deletePayment.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/deletePayment.php
+END
+removeRefund.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/removeRefund.php
+END
+getPaymentTypes.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/getPaymentTypes.php
+END
+deletePaymentType.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/deletePaymentType.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/index.php
+END
+addFee.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/addFee.php
+END
+addMassPayment.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/addMassPayment.php
+END
+removeWaiver.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/removeWaiver.php
+END
+refundPayment.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/refundPayment.php
+END
+getFees.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/getFees.php
+END
+deleteFee.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/deleteFee.php
+END
+addPayment.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/addPayment.php
+END
+addPaymentType.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/opensis/!svn/ver/292/trunk/modules/Billing/ajax/addPaymentType.php
+END

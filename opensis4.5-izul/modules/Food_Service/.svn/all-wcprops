@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svnroot/opensis/!svn/ver/298/trunk/modules/Food_Service
+END
+Search.php-upgrade
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/Search.php-upgrade
+END
+AssignSchool.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/AssignSchool.php
+END
+ServeMenus.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/ServeMenus.php
+END
+mfoodService.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/mfoodService.sql
+END
+Student.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/Student.inc.php
+END
+upgrade.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/upgrade.sql
+END
+TransactionsReport.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/TransactionsReport.php
+END
+Menu.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svnroot/opensis/!svn/ver/295/trunk/modules/Food_Service/Menu.php
+END
+TeacherCompletion.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/TeacherCompletion.php
+END
+TakeMenuCounts.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/TakeMenuCounts.php
+END
+Search.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/Search.php
+END
+MenuItems.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/opensis/!svn/ver/298/trunk/modules/Food_Service/MenuItems.php
+END
+Transactions.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/Transactions.php
+END
+DailyMenus.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/opensis/!svn/ver/298/trunk/modules/Food_Service/DailyMenus.php
+END
+Accounts.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/Accounts.php
+END
+Kiosk.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/opensis/!svn/ver/298/trunk/modules/Food_Service/Kiosk.php
+END
+MenuReports.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/MenuReports.php
+END
+User.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/User.inc.php
+END
+Statements.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/Statements.php
+END
+Menus.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svnroot/opensis/!svn/ver/298/trunk/modules/Food_Service/Menus.php
+END
+Reminders.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/Reminders.php
+END
+ActivityReport.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/opensis/!svn/ver/292/trunk/modules/Food_Service/ActivityReport.php
+END
