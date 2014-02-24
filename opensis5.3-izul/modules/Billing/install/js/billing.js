@@ -39,7 +39,7 @@ billing.CheckForm = function(form)
 		{
 			if(form.elements[i].value == '' || form.elements[i].value == null)
 			{
-				alert("Please Complete All Fields");
+				alert("Harap Semuanya Diisi");
 				return false;	
 			}
 		}
@@ -66,7 +66,7 @@ billing.formatCurrency = function(num) {
 
     num.substring(num.length-(4*i+3));
 
-    return (((sign)?'':'-') + '$' + num + '.' + cents);
+    return (((sign)?'':'-') + 'Rp' + num + '.' + cents);
 }
 
 billing.showBalances = function(){
@@ -127,17 +127,17 @@ billing.searchStudents = function(){
 							}
 							else
 							{
-								alert('Error Searching Students');
+								alert('Error Mencari Siswa');
 							}
 						}
 						catch(ex)
 						{
-							alert('Error Getting Description');
+							alert('Error Mendapatkan Deskripsi');
 						}
 					    },     
 					    onFailure: function()
 					    {
-						alert('Something went wrong...');
+						alert('Terjadi Kesalahan');
 					    }
         });
 };
@@ -159,11 +159,11 @@ billing.buildStudentInformation = function(){
 	totalPayment  = parseFloat(totalPayment);
     var balance   = billing.formatCurrency((totalFee - totalPayment));
 		
-	var html = 'Student: '+billing.STUDENT.last+', '+billing.STUDENT.first+
+	var html = 'Siswa: '+billing.STUDENT.last+', '+billing.STUDENT.first+
 	  	   '<br/>'+
 	  	   '<table>'+
-	  	   '<tr><td>Total From Fees:</td><td>'+billing.STUDENT.balance.totalFee+'</td></tr>'+
-	  	   '<tr><td>Total From Payments:</td><td>'+billing.STUDENT.balance.totalPayment+'</td></tr>'+
+	  	   '<tr><td>Total Tagihan:</td><td>'+billing.STUDENT.balance.totalFee+'</td></tr>'+
+	  	   '<tr><td>Total Pembayaran:</td><td>'+billing.STUDENT.balance.totalPayment+'</td></tr>'+
 	  	   '<tr><td>Balance:</td><td>'+balance+'</td></tr>'+
 	  	   '</table>';
 		
@@ -189,7 +189,7 @@ billing.getStudentFees = function(studentId){
 								}
 								else
 								{
-									alert('Error Searching Students');
+									alert('Error Mencari Siswa');
 								}
 							}
 							catch(ex)
@@ -199,7 +199,7 @@ billing.getStudentFees = function(studentId){
 						    },
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         });
 };
@@ -208,12 +208,12 @@ billing.buildFeeTbl = function(){
 	var html = '<table style="width:550px;" cellspacing="0" cellpadding="0">'+
 				'<thead style="border:solid 2px black;background-color:#09C;font-weight:bold;">'+
 				'<tr align="center">'+
-					'<td style="color:#FFF;">Title</td>'+
-					'<td style="color:#FFF;">Amount</td>'+
-					'<td style="color:#FFF;">Assigned</td>'+
-					'<td style="color:#FFF;">Due</td>'+
-					'<td style="color:#FFF;">Comment</td>'+
-					'<td style="color:#FFF;">Action</td>'+
+					'<td style="color:#FFF;">Judul</td>'+
+					'<td style="color:#FFF;">Jumlah</td>'+
+					'<td style="color:#FFF;">Tanggal Mulai</td>'+
+					'<td style="color:#FFF;">Tanggal akhir</td>'+
+					'<td style="color:#FFF;">Komentar</td>'+
+					'<td style="color:#FFF;">Aksi</td>'+
 				'</tr>'+
 				'</thead>';
 	
@@ -232,7 +232,7 @@ billing.buildFeeTbl = function(){
 				'<td>'+billing.STUDENT.fees[i].assignedDate+'</td>'+
 				'<td>'+billing.STUDENT.fees[i].dueDate+'</td>'+
 				'<td>'+billing.STUDENT.fees[i].comment+'</td>'+
-				'<td>Waived | <a href="javascript:billing.deleteFee('+billing.STUDENT.fees[i].id+')">Delete</a></td>'+
+				'<td>Waived | <a href="javascript:billing.deleteFee('+billing.STUDENT.fees[i].id+')">Hapus</a></td>'+
 				'</tr>';
 			
 			if(i % 2 != 0){
@@ -247,7 +247,7 @@ billing.buildFeeTbl = function(){
 				'<td>'+billing.STUDENT.fees[i].assignedDate+'</td>'+
 				'<td>'+billing.STUDENT.fees[i].dueDate+'</td>'+
 				'<td>Waiver</td>'+
-				'<td><a href="javascript:billing.removeWaiveFee('+billing.STUDENT.fees[i].id+')">Remove Waiver</a></td>'+
+				'<td><a href="javascript:billing.removeWaiveFee('+billing.STUDENT.fees[i].id+')">Hapus Waiver</a></td>'+
 				'</tr>';
 		}
 		else{
@@ -256,7 +256,7 @@ billing.buildFeeTbl = function(){
 				'<td>'+billing.STUDENT.fees[i].assignedDate+'</td>'+
 				'<td>'+billing.STUDENT.fees[i].dueDate+'</td>'+
 				'<td>'+billing.STUDENT.fees[i].comment+'</td>'+
-				'<td><a href="javascript:billing.waiveFee('+billing.STUDENT.fees[i].id+')">Waive</a> | <a href="javascript:billing.deleteFee('+billing.STUDENT.fees[i].id+')">Delete</a></td>'+
+				'<td><a href="javascript:billing.waiveFee('+billing.STUDENT.fees[i].id+')">Waive</a> | <a href="javascript:billing.deleteFee('+billing.STUDENT.fees[i].id+')">Hapus</a></td>'+
 				'</tr>';
 		}
 		
@@ -264,9 +264,9 @@ billing.buildFeeTbl = function(){
 		
 	}
 	if(length == 0){
-		html += '<tr style="background-color:#FFFF99"><td colspan="6">No Fees</td></tr>';
+		html += '<tr style="background-color:#FFFF99"><td colspan="6">Tidak Ada Tagihan</td></tr>';
 	}
-	html += '<tr><td colspan="6"><a href="javascript:billing.showAddFee();">Add Fee [+]</a></td></tr></table>';
+	html += '<tr><td colspan="6"><a href="javascript:billing.showAddFee();">Tambah Tagihan [+]</a></td></tr></table>';
 	$('feesTblDiv').innerHTML = html;
 	billing.buildStudentInformation();
 };
@@ -294,23 +294,23 @@ billing.removeWaiveFee = function(feeId){
 								var jsonObject = eval('('+jsonData+')');
 								if(jsonObject.result[0].success)
 								{
-									alert('Waiver Removed');
+									alert('Waiver Dihapus');
 									billing.getStudentFees(billing.STUDENT.id);
 								}
 								else
 								{
-									alert('Error Adding Fee');
+									alert('Error Menambahkan Tagihan');
 								}
 							}
 							catch(ex)
 							{
 								//alert(ex);
-								alert('Error Adding Fee');
+								alert('Error Menambahkan Tagihna');
 							}
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         	});
 };
@@ -327,23 +327,23 @@ billing.waiveFee = function(feeId){
 								var jsonObject = eval('('+jsonData+')');
 								if(jsonObject.result[0].success)
 								{
-									alert('Fee Waived');
+									alert('Tagihan Waived');
 									billing.getStudentFees(billing.STUDENT.id);
 								}
 								else
 								{
-									alert('Error Adding Fee');
+									alert('Error Menambahkan Tagihan');
 								}
 							}
 							catch(ex)
 							{
 								//alert(ex);
-								alert('Error Adding Fee');
+								alert('Error Menambahkan Tagihan');
 							}
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         	});
 };
@@ -360,23 +360,23 @@ billing.deleteFee = function(feeId){
 								var jsonObject = eval('('+jsonData+')');
 								if(jsonObject.result[0].success)
 								{
-									alert('Fee Deleted');
+									alert('Tagihan Terhapus');
 									billing.getStudentFees(billing.STUDENT.id);
 								}
 								else
 								{
-									alert('Error Adding Fee');
+									alert('Error Menghapus Tagihan');
 								}
 							}
 							catch(ex)
 							{
 								//alert(ex);
-								alert('Error Adding Fee');
+								alert('Error Menghapus Tagihan');
 							}
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         	});
 };
@@ -396,24 +396,24 @@ billing.saveFee = function(){
 								var jsonObject = eval('('+jsonData+')');
 								if(jsonObject.result[0].success)
 								{
-									alert('Fee Added');
+									alert('Tagihan Ditambahkan');
 									billing.getStudentFees(billing.STUDENT.id);
 									billing.hideAddFee();
 								}
 								else
 								{
-									alert('Error Adding Fee');
+									alert('Error Menambahkan Tagihan');
 								}
 							}
 							catch(ex)
 							{
 								//alert(ex);
-								alert('Error Adding Fee');
+								alert('Error Menambahkan Tagihan');
 							}
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         	});
 	}
@@ -458,17 +458,17 @@ billing.searchStudents_payment = function(){
 							}
 							else
 							{
-								alert('Error Searching Students');
+								alert('Error Mencari Siswa');
 							}
 						}
 						catch(ex)
 						{
-							alert('Error Getting Description');
+							alert('Error Mendapatkan Deskripsi');
 						}
 					    },     
 					    onFailure: function()
 					    { 
-						alert('Something went wrong...');
+						alert('Terjadi Kesalahan');
 					    }   
         });
 };
@@ -499,7 +499,7 @@ billing.getStudentPayments = function(studentId){
 								}
 								else
 								{
-									alert('Error Getting Payments');
+									alert('Error Mendapatkan Pembayaran');
 								}
 							}
 							catch(ex)
@@ -510,7 +510,7 @@ billing.getStudentPayments = function(studentId){
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         });
 };
@@ -519,11 +519,11 @@ billing.buildPaymentTbl = function(){
 	var html = '<table style="width:550px;" cellspacing="0" cellpadding="0">'+
 				'<thead style="border:solid 2px black;background-color:#09C;font-weight:bold;">'+
 				'<tr align="center">'+
-					'<td style="color:#FFF;">Amount</td>'+
-					'<td style="color:#FFF;">Type</td>'+
-					'<td style="color:#FFF;">Date</td>'+
-					'<td style="color:#FFF;">Comment</td>'+
-					'<td style="color:#FFF;">Action</td>'+
+					'<td style="color:#FFF;">Jumlah</td>'+
+					'<td style="color:#FFF;">Tipe</td>'+
+					'<td style="color:#FFF;">Tanggal</td>'+
+					'<td style="color:#FFF;">Komentar</td>'+
+					'<td style="color:#FFF;">Aksi</td>'+
 				'</tr>'+
 				'</thead>';
 	
@@ -541,7 +541,7 @@ billing.buildPaymentTbl = function(){
 				'<td>'+billing.STUDENT.payments[i].type+'</td>'+
 				'<td>'+billing.STUDENT.payments[i].date+'</td>'+
 				'<td>'+billing.STUDENT.payments[i].comment+'</td>'+
-				'<td>Refunded | <a href="javascript:billing.deletePayment('+billing.STUDENT.payments[i].id+')">Delete</a></td>'+
+				'<td>Pengembalian | <a href="javascript:billing.deletePayment('+billing.STUDENT.payments[i].id+')">Hapus</a></td>'+
 				'</tr>';
 			
 			if(i % 2 != 0){
@@ -555,7 +555,7 @@ billing.buildPaymentTbl = function(){
 				'<td>'+billing.STUDENT.payments[i].type+'</td>'+
 				'<td>'+billing.STUDENT.payments[i].date+'</td>'+
 				'<td>'+billing.STUDENT.payments[i].comment+'</td>'+
-				'<td><a href="javascript:billing.removeRefund('+billing.STUDENT.payments[i].id+')">Remove Refund</a></td>'+
+				'<td><a href="javascript:billing.removeRefund('+billing.STUDENT.payments[i].id+')">Hapus Pengembalian</a></td>'+
 				'</tr>';
 		}
 		else{
@@ -563,7 +563,7 @@ billing.buildPaymentTbl = function(){
 				'<td>'+billing.STUDENT.payments[i].type+'</td>'+
 				'<td>'+billing.STUDENT.payments[i].date+'</td>'+
 				'<td>'+billing.STUDENT.payments[i].comment+'</td>'+
-				'<td><a href="javascript:billing.refund('+billing.STUDENT.payments[i].id+')">Refund</a> | <a href="javascript:billing.deletePayment('+billing.STUDENT.payments[i].id+')">Delete</a></td>'+
+				'<td><a href="javascript:billing.refund('+billing.STUDENT.payments[i].id+')">Pengembalian</a> | <a href="javascript:billing.deletePayment('+billing.STUDENT.payments[i].id+')">Hapus</a></td>'+
 				'</tr>';
 		}
 		
@@ -571,9 +571,9 @@ billing.buildPaymentTbl = function(){
 		
 	}
 	if(length == 0){
-		html += '<tr style="background-color:#FFFF99"><td colspan="6">No Payments</td></tr>';
+		html += '<tr style="background-color:#FFFF99"><td colspan="6">Tidak Ada Pembayaran</td></tr>';
 	}
-	html += '<tr><td colspan="6"><a href="javascript:billing.showAddPayment();">Add Payment [+]</a></td></tr></table>';
+	html += '<tr><td colspan="6"><a href="javascript:billing.showAddPayment();">Tambah Pembayaran [+]</a></td></tr></table>';
 	$('paymentTblDiv').innerHTML = html;
 	billing.buildStudentInformation();
 };
@@ -587,12 +587,12 @@ billing.buildStudentInformation = function(){
 	totalPayment  = parseFloat(totalPayment);
  	var balance   = billing.formatCurrency((totalFee - totalPayment));
 
-	var html = 'Student: '+billing.STUDENT.last+', '+billing.STUDENT.first+
+	var html = 'Siswa: '+billing.STUDENT.last+', '+billing.STUDENT.first+
 	  	   '<br/>'+
 	  	   '<table>'+
-	  	   '<tr><td>Total From Fees:</td><td>'+billing.STUDENT.balance.totalFee+'</td></tr>'+
-	  	   '<tr><td>Total From Payments:</td><td>'+billing.STUDENT.balance.totalPayment+'</td></tr>'+
-	  	   '<tr><td>Balance:</td><td>'+balance+'</td></tr>'+
+	  	   '<tr><td>Total Tagihan:</td><td>'+billing.STUDENT.balance.totalFee+'</td></tr>'+
+	  	   '<tr><td>Total Pembayaran:</td><td>'+billing.STUDENT.balance.totalPayment+'</td></tr>'+
+	  	   '<tr><td>Saldo:</td><td>'+balance+'</td></tr>'+
 	  	   '</table>';
 		
 	$('selectedStuH').innerHTML = html;
@@ -623,24 +623,24 @@ billing.savePayment = function(){
 								var jsonObject = eval('('+jsonData+')');
 								if(jsonObject.result[0].success)
 								{
-									alert('Payment Added');
+									alert('Pembayaran Ditambahkan');
 									billing.getStudentPayments(billing.STUDENT.id);
 									billing.hideAddPayment();
 								}
 								else
 								{
-									alert('Error Adding Payment');
+									alert('Error Menambahkan Pembayaran');
 								}
 							}
 							catch(ex)
 							{
 								//alert(ex);
-								alert('Error Adding Payment');
+								alert('Error Menghapus Tagihan');
 							}
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         	});
 	}
@@ -661,23 +661,23 @@ billing.removeRefund = function(paymentId){
 								var jsonObject = eval('('+jsonData+')');
 								if(jsonObject.result[0].success)
 								{
-									alert('Refund Removed');
+									alert('Pengembalian Dihapus');
 									billing.getStudentPayments(billing.STUDENT.id);
 								}
 								else
 								{
-									alert('Error Removing Refund');
+									alert('Error Menghapus Pengembalian');
 								}
 							}
 							catch(ex)
 							{
 								//alert(ex);
-								alert('Error Removing Refund');
+								alert('Error Menghapus Pengembalian');
 							}
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         	});
 };
@@ -694,23 +694,23 @@ billing.refund = function(paymentId){
 								var jsonObject = eval('('+jsonData+')');
 								if(jsonObject.result[0].success)
 								{
-									alert('Payment Refunded');
+									alert('Pembayaran Dikembalikan');
 									billing.getStudentPayments(billing.STUDENT.id);
 								}
 								else
 								{
-									alert('Error Refunding');
+									alert('Error Mengembalikan');
 								}
 							}
 							catch(ex)
 							{
 								//alert(ex);
-								alert('Error Refunding');
+								alert('Error Mengembalikan');
 							}
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         	});
 };
@@ -727,23 +727,23 @@ billing.deletePayment = function(feeId){
 								var jsonObject = eval('('+jsonData+')');
 								if(jsonObject.result[0].success)
 								{
-									alert('Payment Deleted');
+									alert('Pembayaran Dihapus');
 									billing.getStudentPayments(billing.STUDENT.id);
 								}
 								else
 								{
-									alert('Error Deleting Payment');
+									alert('Error Menghapus Pembayaran');
 								}
 							}
 							catch(ex)
 							{
 								//alert(ex);
-								alert('Error Deleting Payment');
+								alert('Error Menghapus Pembayaran');
 							}
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         	});
 };
@@ -790,22 +790,22 @@ billing.submitMassFeeForm = function(){
 								var jsonObject = eval('('+jsonData+')');
 								if(jsonObject.result[0].success)
 								{
-									alert('Fees Added');
+									alert('Tagihan Ditambahkan');
 								}
 								else
 								{
-									alert('Error Adding Fees');
+									alert('Error Menambahkan Tagihan');
 								}
 							}
 							catch(ex)
 							{
 								//alert(ex);
-								alert('Error Adding Fees');
+								alert('Error Menambahkan Tagihan');
 							}
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         	});
 	}
@@ -829,22 +829,22 @@ billing.submitMassPaymentForm = function(){
 								var jsonObject = eval('('+jsonData+')');
 								if(jsonObject.result[0].success)
 								{
-									alert('Payments Added');
+									alert('Pembayaran Ditambahkan');
 								}
 								else
 								{
-									alert('Error Adding Payments');
+									alert('Error Menambahkan Pembayaran');
 								}
 							}
 							catch(ex)
 							{
 								//alert(ex);
-								alert('Error Adding Payments');
+								alert('Error Menambahkan Pembayaran');
 							}
 						    },     
 						    onFailure: function()
 						    { 
-							alert('Something went wrong...');
+							alert('Terjadi Kesalahan');
 						    }   
         	});
 	}
@@ -897,18 +897,18 @@ billing.getAllPaymentTypes = function(){
 				}
 				else
 				{
-					alert('Error Deleting Payment Type');
+					alert('Error Menghapus Tipe Pembayaran');
 				}
 			}
 			catch(ex)
 			{
 				//alert(ex);
-				alert('Error Deleting Payment Type');
+				alert('Error Menghapus Tipe Pembayaran');
 			}
 		    },     
 		    onFailure: function()
 		    { 
-			alert('Something went wrong...');
+			alert('Terjadi Kesalahan');
 	    	}   
        	});
 };
@@ -918,8 +918,8 @@ billing.buildTypesTable = function(types){
 	html += '<table style="width:300px;" cellspacing="0" cellpadding="1">'+
 			'<thead style="border:solid 2px black;background-color:#09C;font-weight:bold;">'+
 			'<tr>'+
-				'<td style="color:#FFF;">Description</td>'+
-				'<td style="color:#FFF;">Delete</td>'+
+				'<td style="color:#FFF;">Deskripsi</td>'+
+				'<td style="color:#FFF;">Hapus</td>'+
 			'</tr>'+
 			'</thead>';
 	var length = types.length;
@@ -932,16 +932,16 @@ billing.buildTypesTable = function(types){
 		}
 		
 		html += '<td>'+types[i].desc+'</td>'+
-		  	'<td><a href="javascript:billing.deletePaymentType('+types[i].id+');">Delete</a></td>'+
+		  	'<td><a href="javascript:billing.deletePaymentType('+types[i].id+');">Hapus</a></td>'+
 		  	'</tr>';
 	}
 	
-	html += '<tr><td colspan="3"><a align="left" href="javascript:billing.showNewPaymentType();">[+] Add New</a></td></tr></table>';
+	html += '<tr><td colspan="3"><a align="left" href="javascript:billing.showNewPaymentType();">[+] Tambah Baru</a></td></tr></table>';
 	$('main').innerHTML = html;
 };
 
 billing.showNewPaymentType = function(){
-	html = '<table><tr><td>Description</td><td><input type="text" size="30" id="newPaymentType" /></td></tr><tr><td colspan="2" align="center"><input type="button" onclick="billing.saveNewPaymentType();" value="Save" />&nbsp;&nbsp;<input type="button" onclick="billing.cancelNewPaymentType();" value="Cancel" /></td></tr></table>';
+	html = '<table><tr><td>Description</td><td><input type="text" size="30" id="newPaymentType" /></td></tr><tr><td colspan="2" align="center"><input type="button" onclick="billing.saveNewPaymentType();" value="Simpan" />&nbsp;&nbsp;<input type="button" onclick="billing.cancelNewPaymentType();" value="Batal" /></td></tr></table>';
 	$('edit_new_Area').innerHTML = html;
 };
 
@@ -961,23 +961,23 @@ billing.deletePaymentType = function(id){
 				var jsonObject = eval('('+jsonData+')');
 				if(jsonObject.result[0].success)
 				{
-					alert('Payment Type Deleted');
+					alert('Tipe Pembayaran Dihapus');
 					billing.getAllPaymentTypes();
 				}
 				else
 				{
-					alert('Error Deleting Payment Type');
+					alert('Error Menghapus Tipe Pembayaran');
 				}
 			}
 			catch(ex)
 			{
 				//alert(ex);
-				alert('Error Deleting Payment Type');
+				alert('Error Menghapus Tipe Pembayaran');
 			}
 		    },     
 		    onFailure: function()
 		    { 
-			alert('Something went wrong...');
+			alert('Terjadi Kesalahan');
 	    	}   
        	});
 };
@@ -998,23 +998,23 @@ billing.saveNewPaymentType = function(){
 				var jsonObject = eval('('+jsonData+')');
 				if(jsonObject.result[0].success)
 				{
-					alert('Payment Type Added');
+					alert('Tipe Pembayaran Ditambahkan');
 					billing.getAllPaymentTypes();
 				}
 				else
 				{
-					alert('Error Adding Payment Type');
+					alert('Error Menambahkan Tipe Pembayaran');
 				}
 			}
 			catch(ex)
 			{
 				//alert(ex);
-				alert('Error Adding Payment Type');
+				alert('Error Menambahkan Tipe Pembayaran');
 			}
 		    },     
 		    onFailure: function()
 		    { 
-			alert('Something went wrong...');
+			alert('Terjadi Kesalahan');
 	    	}   
        	});
 };

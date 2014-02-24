@@ -45,29 +45,31 @@ if($TAB == 2){
 
 	echo '<table class="tab_header_bg" cellspacing="0" style="cursor:pointer;" cellpadding="0" border="0" onclick="billing.showBalances();" align="left">
 			    <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-			    <td class="drawinactivetab_header" align="left" valign="middle">Balances</td>
+			    <td class="drawinactivetab_header" align="left" valign="middle">Saldo</td>
 			    <td class="tab_header_right"/></tr></tbody>
 			  </table>
 			  <table class="tab_header_bg_active" cellspacing="0" cellpadding="0" border="0" align="left">
 			      <tbody><tr id="tab[]" class="tab_header_bg_active">
-			  	  <td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">DailyTransactions</td>
+			  	  <td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Transaksi Per Hari</td>
 			  	  <td class="tab_header_right_active"/></tr></tbody>
 			  </table></td></tr><tr><td class="block_topleft_corner"/><td class="block_topmiddle"/><td class="block_topright_corner"/></tr><tr><td class="block_left" rowspan="2"/><td class="block_bg"/><td class="block_right" rowspan="2"/></tr><tr><td><table class="block_bg" width="100%" cellspacing="0" cellpadding="5"><tbody><tr><td class="block_bg">';
 
-	echo '<img style="float:left;cursor:pointer;" onclick="billing.showTransactionsPDF();" src="modules/Billing/images/icon-pdf.gif" /><div style="width:600px;" align="center">';
+	//echo '<img style="float:left;cursor:pointer;" onclick="billing.showTransactionsPDF();" src="modules/Billing/images/icon-pdf.gif" />';
+	echo '<a href="#" onclick="billing.showTransactionsPDF();">Cetak PDF</a>';
+	echo '<div style="width:600px;" align="center">';
 
-	echo '<form id="filterFrm"><font style="font-weight:bold;">Student</font>&nbsp;<input id="studentFilterTB" name="USERNAME" value="'.$username.'" type="text" size="30" />&nbsp;&nbsp;<input style="cursor:pointer;" type="button" onclick="billing.filterTransReport(2);" value="Filter Student" />&nbsp;&nbsp;<input style="cursor:pointer;" type="button" onclick="billing.filterTransReportAll(2);" value="All Students" />
-		  <table><tr><td><font style="font-weight:bold;">Begin</font>&nbsp;'.buildDateSelect('BEGIN', 89, true,$beginD).'</td>
-		  <td><font style="font-weight:bold;">End</font>&nbsp;'.buildDateSelect('END', 90, false, $endD).'</td><td><input style="cursor:pointer;" type="button" onclick="billing.filterTransReport(2);" value="Filter Date" /></td></tr>
+	echo '<form id="filterFrm"><font style="font-weight:bold;">Siswa</font>&nbsp;<input id="studentFilterTB" name="USERNAME" value="'.$username.'" type="text" size="30" />&nbsp;&nbsp;<input style="cursor:pointer;" type="button" onclick="billing.filterTransReport(2);" value="Filter Siswa" />&nbsp;&nbsp;<input style="cursor:pointer;" type="button" onclick="billing.filterTransReportAll(2);" value="Semua Siswa" />
+		  <table><tr><td><font style="font-weight:bold;">Awal</font>&nbsp;'.buildDateSelect('BEGIN', 89, true,$beginD).'</td>
+		  <td><font style="font-weight:bold;">Akhir</font>&nbsp;'.buildDateSelect('END', 90, false, $endD).'</td><td><input style="cursor:pointer;" type="button" onclick="billing.filterTransReport(2);" value="Filter Tanggal" /></td></tr>
 		  </table></form>
 		  <table style="width:550px;" cellspacing="0" cellpadding="1">
 			<thead style="border:solid 2px black;background-color:#09C;font-weight:bold;">
 			<tr>
-				<td style="color:#FFF;">Student</td>
-				<td style="color:#FFF;">Fee</td>
-				<td style="color:#FFF;">Payment</td>
-				<td style="color:#FFF;">Date</td>
-				<td style="color:#FFF;">Comment</td>
+				<td style="color:#FFF;">Siswa</td>
+				<td style="color:#FFF;">Tagihan</td>
+				<td style="color:#FFF;">Pembayaran</td>
+				<td style="color:#FFF;">Tanggal</td>
+				<td style="color:#FFF;">Komentar</td>
 			</tr>
 			</thead>';
 
@@ -256,28 +258,30 @@ if($TAB == 2){
 		$counter++;
 	}
 
-	echo '<tr><td style="font-weight:bold;">Total</td><td style="font-weight:bold;">$'.number_format($feeBal,2).'</td><td style="font-weight:bold;">$'.number_format($paymentBal,2).'</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></div>';
+	echo '<tr><td style="font-weight:bold;">Total</td><td style="font-weight:bold;">Rp'.number_format($feeBal,2).'</td><td style="font-weight:bold;">Rp'.number_format($paymentBal,2).'</td><td>&nbsp;</td><td>&nbsp;</td></tr></table></div>';
 
 }
 else{
 	$username = $_REQUEST['USERNAME'];
 
-	echo '<table cellspacing="0" cellpadding="0"><tbody><tr><td width="9"/><td class="block_stroke" align="left"><table class="tab_header_bg_active" cellspacing="0" cellpadding="0" border="0" align="left"><tbody><tr id="tab[]" class="tab_header_bg_active"><td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Balances</td><td class="tab_header_right_active"/></tr></tbody></table>';
+	echo '<table cellspacing="0" cellpadding="0"><tbody><tr><td width="9"/><td class="block_stroke" align="left"><table class="tab_header_bg_active" cellspacing="0" cellpadding="0" border="0" align="left"><tbody><tr id="tab[]" class="tab_header_bg_active"><td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Saldo</td><td class="tab_header_right_active"/></tr></tbody></table>';
 
 	echo '<table class="tab_header_bg" style="cursor:pointer;" onclick="billing.showDaliyTrans();" cellspacing="0" cellpadding="0" border="0" align="left">
 		  <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-		  <td class="drawinactivetab_header" align="left" valign="middle">Daily Transactions</td>
+		  <td class="drawinactivetab_header" align="left" valign="middle">Transaksi Per Hari</td>
 		  <td class="tab_header_right"/></tr></tbody></table>
 		  </td></tr><tr><td class="block_topleft_corner"/><td class="block_topmiddle"/><td class="block_topright_corner"/></tr><tr><td class="block_left" rowspan="2"/><td class="block_bg"/><td class="block_right" rowspan="2"/></tr><tr><td><table class="block_bg" width="100%" cellspacing="0" cellpadding="5"><tbody><tr><td class="block_bg">';
 
-	echo '<img style="float:left;cursor:pointer;" onclick="billing.showBalancesPDF();" src="modules/Billing/images/icon-pdf.gif" /><div style="width:600px;" align="center"><form id="filterFrm"><font style="font-weight:bold;">Student</font>&nbsp;<input id="studentFilterTB" name="USERNAME" value="'.$username.'" type="text" size="30" />&nbsp;&nbsp;<input style="cursor:pointer;" type="button" onclick="billing.filterTransReport(1);" value="Filter Student" />&nbsp;&nbsp;<input style="cursor:pointer;" type="button" onclick="billing.filterTransReportAll(1);" value="All Students" /></form><br/>
+	//echo '<img style="float:left;cursor:pointer;" onclick="billing.showBalancesPDF();" src="modules/Billing/images/icon-pdf.gif" />';
+	echo '<a href="#" onclick="billing.showBalancesPDF();">Cetak PDF</a>';
+	echo '<div style="width:600px;" align="center"><form id="filterFrm"><font style="font-weight:bold;">Siswa</font>&nbsp;<input id="studentFilterTB" name="USERNAME" value="'.$username.'" type="text" size="30" />&nbsp;&nbsp;<input style="cursor:pointer;" type="button" onclick="billing.filterTransReport(1);" value="Filter Siswa" />&nbsp;&nbsp;<input style="cursor:pointer;" type="button" onclick="billing.filterTransReportAll(1);" value="Semua siswa" /></form><br/>
 		  <table style="width:550px;" cellspacing="0" cellpadding="1">
 			<thead style="border:solid 2px black;background-color:#09C;font-weight:bold;">
 			<tr>
-				<td style="color:#FFF;">Student</td>
-				<td style="color:#FFF;">Student ID</td>
-				<td style="color:#FFF;">Grade</td>
-				<td style="color:#FFF;">Balance</td>
+				<td style="color:#FFF;">Siswa</td>
+				<td style="color:#FFF;">No Induk</td>
+				<td style="color:#FFF;">Kelas</td>
+				<td style="color:#FFF;">Saldo</td>
 			</tr>
 			</thead>';
 

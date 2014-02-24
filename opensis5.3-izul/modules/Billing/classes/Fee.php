@@ -181,7 +181,7 @@ class Fee{
         $row2 = db_fetch_row($result2);
         $totalPayment = $row2['TOTAL_PAYMENT'];
         if($totalPayment == null){
-            $totalPayment = "$0.00";
+            $totalPayment = "Rp0.00";
         }
 
         $query3 ="SELECT SUM(amount) AS total_fee FROM BILLING_FEE WHERE student_id = $studentId and waived = 0;";
@@ -189,7 +189,7 @@ class Fee{
         $row3 = db_fetch_row($result3);
         $totalFee = $row3['TOTAL_FEE'];
         if($totalFee == null){
-            $totalFee = "$0.00";
+            $totalFee = "Rp0.00";
         }
 
         $json = $json.'],"balance":[{"totalFee":"'.$totalFee.'","totalPayment":"'.$totalPayment.'"}]';

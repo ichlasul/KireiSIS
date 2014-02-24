@@ -26,17 +26,17 @@
 #  You should have received a copy of the GNU General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #**************************************************************************
-$menu['Billing']['admin'] = array(
-						'Billing/reports.php'=>'Reports',
-						'Billing/fees.php'=>'Transactions',
+$menu['Pembayaran']['admin'] = array(
+						'Billing/reports.php'=>'Laporan',
+						'Billing/fees.php'=>'Transaksi',
 						'Billing/billingAdmin.php'=>'Admin'
 					);
 
-$menu['Billing']['teacher'] = array(
-						'Billing/reports.php'=>'Reports',
+$menu['Pembayaran']['teacher'] = array(
+						'Billing/reports.php'=>'Laporan',
 					);
 
-$menu['Billing']['parent'] = array(
-						'Billing/reports.php'=>'Reports',
+$menu['Pembayaran']['parent'] = array(
+						'Billing/reports.php'=>'Laporan',
 					);
 ?>

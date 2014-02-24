@@ -35,21 +35,21 @@ if($tab == 3){
 
 	echo '<table class="tab_header_bg" cellspacing="0" style="cursor:pointer;" cellpadding="0" border="0" onclick="billing.showFees();" align="left">
 			    <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-			    <td class="drawinactivetab_header" align="left" valign="middle">Fees</td>
+			    <td class="drawinactivetab_header" align="left" valign="middle">Tagihan</td>
 			    <td class="tab_header_right"/></tr></tbody>
 			  </table>
 			  <table class="tab_header_bg" style="cursor:pointer;" onclick="billing.showPayments();" cellspacing="0" cellpadding="0" border="0" align="left">
 			  			  		  <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-			  			  		  <td class="drawinactivetab_header" align="left" valign="middle">Payments</td>
+			  			  		  <td class="drawinactivetab_header" align="left" valign="middle">Pembayaran</td>
 		  	  <td class="tab_header_right"/></tr></tbody></table>
 			  <table class="tab_header_bg_active" cellspacing="0" cellpadding="0" border="0" align="left">
 			  			      <tbody><tr id="tab[]" class="tab_header_bg_active">
-			  			  	  <td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Mass Fees</td>
+			  			  	  <td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Tagihan Massal</td>
 			  			  	  <td class="tab_header_right_active"/></tr></tbody>
 			  </table>
 			  <table class="tab_header_bg" style="cursor:pointer;" onclick="billing.showMassPayments();" cellspacing="0" cellpadding="0" border="0" align="left">
 			  		  <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-			  		  <td class="drawinactivetab_header" align="left" valign="middle">Mass Payments</td>
+			  		  <td class="drawinactivetab_header" align="left" valign="middle">Pembayaran Massal</td>
 		  	  <td class="tab_header_right"/></tr></tbody></table>
 
 			  </td></tr><tr><td class="block_topleft_corner"/><td class="block_topmiddle"/><td class="block_topright_corner"/></tr><tr><td class="block_left" rowspan="2"/><td class="block_bg"/><td class="block_right" rowspan="2"/></tr><tr><td><table class="block_bg" width="100%" cellspacing="0" cellpadding="5"><tbody><tr><td class="block_bg">';
@@ -57,19 +57,19 @@ if($tab == 3){
 	echo '<div style="width:600px;" align="center">
 			<form id="newMassFeeFrm">
 		  	<table>
-		  	<tr><td>Title:</td><td><input type="text" size="20" id="title" name="TITLE" /></td></tr>
-		  	<tr><td>Amount:</td><td><input type="text" size="20" id="amount" name="AMOUNT" /></td></tr>
-		  	<tr><td>Assigned:</td><td>'.buildDateSelect('ASSIGNED', 89).'</td></tr>
-		  	<tr><td>Due Date:</td><td>'.buildDateSelect('DUE', 91).'</td></tr>
-		  	<tr><td>Comment:</td><td><input type="text" size="20" id="comment" name="COMMENT" /></td></tr>
+		  	<tr><td>Judul:</td><td><input type="text" size="20" id="title" name="TITLE" /></td></tr>
+		  	<tr><td>Jumlah:</td><td><input type="text" size="20" id="amount" name="AMOUNT" /></td></tr>
+		  	<tr><td>Tanggal Mulai:</td><td>'.buildDateSelect('ASSIGNED', 89).'</td></tr>
+		  	<tr><td>Tanggal Akhir:</td><td>'.buildDateSelect('DUE', 91).'</td></tr>
+		  	<tr><td>Komentar:</td><td><input type="text" size="20" id="comment" name="COMMENT" /></td></tr>
 		    </table>
 		  	<table style="width:550px;" cellspacing="0" cellpadding="0">
 				<thead style="border:solid 2px black;background-color:#09C;font-weight:bold;">
 				<tr>
 					<td style="color:#FFF;" align="left"><input type="checkbox" onclick="billing.selectAll(\'newMassFeeFrm\', this);" /></td>
-					<td style="color:#FFF;">Student</td>
-					<td style="color:#FFF;">Student ID</td>
-					<td style="color:#FFF;">Grade</td>
+					<td style="color:#FFF;">Siswa</td>
+					<td style="color:#FFF;">Nomor Induk</td>
+					<td style="color:#FFF;">Kelas</td>
 				</tr>
 				</thead>';
 
@@ -112,7 +112,7 @@ if($tab == 3){
 		$counter++;
 	}
 
-	echo '<tr><td colspan="4" align="center"><input type="button" onclick="billing.submitMassFeeForm();" style="cursor:pointer;" value="Add Selected Fees" /></td></tr>';
+	echo '<tr><td colspan="4" align="center"><input type="button" onclick="billing.submitMassFeeForm();" style="cursor:pointer;" value="Tambah Tagihan Terpilih" /></td></tr>';
 	echo '</table></form>';
 }
 else
@@ -121,20 +121,20 @@ if($tab == 4){
 
 	echo '<table class="tab_header_bg" cellspacing="0" style="cursor:pointer;" cellpadding="0" border="0" onclick="billing.showFees();" align="left">
 			    <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-			    <td class="drawinactivetab_header" align="left" valign="middle">Fees</td>
+			    <td class="drawinactivetab_header" align="left" valign="middle">Tagihan</td>
 			    <td class="tab_header_right"/></tr></tbody>
 			  </table>
 			  <table class="tab_header_bg" style="cursor:pointer;" onclick="billing.showPayments();" cellspacing="0" cellpadding="0" border="0" align="left">
 			  			  		  <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-			  			  		  <td class="drawinactivetab_header" align="left" valign="middle">Payments</td>
+			  			  		  <td class="drawinactivetab_header" align="left" valign="middle">Pembayaran</td>
 		  	  <td class="tab_header_right"/></tr></tbody></table>
 			  <table class="tab_header_bg" style="cursor:pointer;" onclick="billing.showMassFees();" cellspacing="0" cellpadding="0" border="0" align="left">
 			  			  			  		  <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-			  			  			  		  <td class="drawinactivetab_header" align="left" valign="middle">Mass Fees</td>
+			  			  			  		  <td class="drawinactivetab_header" align="left" valign="middle">Tagihan Massal</td>
 		  	  <td class="tab_header_right"/></tr></tbody></table>
 			  <table class="tab_header_bg_active" cellspacing="0" cellpadding="0" border="0" align="left">
 			  			  			      <tbody><tr id="tab[]" class="tab_header_bg_active">
-			  			  			  	  <td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Mass Payments</td>
+			  			  			  	  <td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Pembayaran Massal</td>
 			  			  			  	  <td class="tab_header_right_active"/></tr></tbody>
 			  </table>
 
@@ -143,8 +143,8 @@ if($tab == 4){
 	echo '<div style="width:600px;" align="center">
 			<form id="newMassPaymentFrm">
 		  	<table>
-		  	<tr><td>Amount:</td><td><input type="text" size="20" id="amount" name="AMOUNT" /></td></tr>
-		  	<tr><td>Type:</td><td><select name="TYPE">';
+		  	<tr><td>Jumlah:</td><td><input type="text" size="20" id="amount" name="AMOUNT" /></td></tr>
+		  	<tr><td>Tipe:</td><td><select name="TYPE">';
 	$query = "SELECT type_desc FROM BILLING_PAYMENT_TYPE ORDER BY type_desc";
 	$result = DBQuery($query);
 	while($row = db_fetch_row($result)){
@@ -152,16 +152,16 @@ if($tab == 4){
 	}
 
    echo'</select></td></tr>
-		  	<tr><td>Date:</td><td>'.buildDateSelect('DATE', 89).'</td></tr>
-		  	<tr><td>Comment:</td><td><input type="text" size="20" id="comment" name="COMMENT" /></td></tr>
+		  	<tr><td>Tanggal:</td><td>'.buildDateSelect('DATE', 89).'</td></tr>
+		  	<tr><td>Komentar:</td><td><input type="text" size="20" id="comment" name="COMMENT" /></td></tr>
 		  	</table>
 		  	<table style="width:550px;" cellspacing="0" cellpadding="0">
 				<thead style="border:solid 2px black;background-color:#09C;font-weight:bold;">
 				<tr>
 					<td style="color:#FFF;" align="left"><input type="checkbox" onclick="billing.selectAll(\'newMassPaymentFrm\', this);" /></td>
-					<td style="color:#FFF;">Student</td>
-					<td style="color:#FFF;">Student ID</td>
-					<td style="color:#FFF;">Grade</td>
+					<td style="color:#FFF;">Siswa</td>
+					<td style="color:#FFF;">No Induk</td>
+					<td style="color:#FFF;">Kelas</td>
 				</tr>
 				</thead>';
 
@@ -204,44 +204,44 @@ if($tab == 4){
 		$counter++;
 	}
 
-	echo '<tr><td colspan="4" align="center"><input type="button" onclick="billing.submitMassPaymentForm();" style="cursor:pointer;" value="Add Selected Payments" /></td></tr>';
+	echo '<tr><td colspan="4" align="center"><input type="button" onclick="billing.submitMassPaymentForm();" style="cursor:pointer;" value="Tambah Pembayaran Terpilih" /></td></tr>';
 	echo '</table></form>';
 }
 else
 if($tab == null || $tab == 1){
-	echo '<table cellspacing="0" cellpadding="0"><tbody><tr><td width="9"/><td class="block_stroke" align="left"><table class="tab_header_bg_active" cellspacing="0" cellpadding="0" border="0" align="left"><tbody><tr id="tab[]" class="tab_header_bg_active"><td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Fees</td><td class="tab_header_right_active"/></tr></tbody></table>';
+	echo '<table cellspacing="0" cellpadding="0"><tbody><tr><td width="9"/><td class="block_stroke" align="left"><table class="tab_header_bg_active" cellspacing="0" cellpadding="0" border="0" align="left"><tbody><tr id="tab[]" class="tab_header_bg_active"><td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Tagihan</td><td class="tab_header_right_active"/></tr></tbody></table>';
 
 	echo '<table class="tab_header_bg" style="cursor:pointer;" onclick="billing.showPayments();" cellspacing="0" cellpadding="0" border="0" align="left">
 		  <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-		  <td class="drawinactivetab_header" align="left" valign="middle">Payments</td>
+		  <td class="drawinactivetab_header" align="left" valign="middle">Pembayaran</td>
 		  <td class="tab_header_right"/></tr></tbody></table>
 		  <table class="tab_header_bg" style="cursor:pointer;" onclick="billing.showMassFees();" cellspacing="0" cellpadding="0" border="0" align="left">
 		  <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-		  <td class="drawinactivetab_header" align="left" valign="middle">Mass Fees</td>
+		  <td class="drawinactivetab_header" align="left" valign="middle">Tagihan Massal</td>
 		  <td class="tab_header_right"/></tr></tbody></table>
 		  <table class="tab_header_bg" style="cursor:pointer;" onclick="billing.showMassPayments();" cellspacing="0" cellpadding="0" border="0" align="left">
 		  <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-		  <td class="drawinactivetab_header" align="left" valign="middle">Mass Payments</td>
+		  <td class="drawinactivetab_header" align="left" valign="middle">Pembayaran Massal</td>
 		  <td class="tab_header_right"/></tr></tbody></table>
 
 		  </td></tr><tr><td class="block_topleft_corner"/><td class="block_topmiddle"/><td class="block_topright_corner"/></tr><tr><td class="block_left" rowspan="2"/><td class="block_bg"/><td class="block_right" rowspan="2"/></tr><tr><td><table class="block_bg" width="100%" cellspacing="0" cellpadding="5"><tbody><tr><td class="block_bg">';
 
 	echo '<div style="width:600px;" align="center">
-			<div>Search Students:<input type="text" id="studentSearchTB" size="30" /> <input style="cursor:pointer;" onclick="billing.searchStudents();" type="button" value="Search" /></div>
+			<div>Cari Siswa:<input type="text" id="studentSearchTB" size="30" /> <input style="cursor:pointer;" onclick="billing.searchStudents();" type="button" value="Cari" /></div>
 		  	<div id="searchResultsDiv"></div>
 		  	<br/>
 		  	<h3 id="selectedStuH">
-		  	Student: No Student Selected
+		  	Tidak Ada Siswa Yang Dipilih
 		  	</h3>
 		  	<div id="addFeeDiv" style="display:none;">
 		  	<form id="newFeeFrm">
 		  	<table>
-		  	<tr><td>Title:</td><td><input type="text" size="20" id="title" name="TITLE" /></td></tr>
-		  	<tr><td>Amount:</td><td><input type="text" size="20" id="amount" name="AMOUNT" /></td></tr>
-		  	<tr><td>Assigned:</td><td>'.buildDateSelect('ASSIGNED', 89).'</td></tr>
-		  	<tr><td>Due Date:</td><td>'.buildDateSelect('DUE', 91).'</td></tr>
-		  	<tr><td>Comment:</td><td><input type="text" size="20" id="comment" name="COMMENT" /></td></tr>
-		  	<tr><td colspan="2" align="center"><input type="button" onclick="billing.saveFee();" style="cursor:pointer;" value="Add Fee" /> <input type="button" value="Cancel" style="cursor:pointer;" onclick="billing.hideAddFee();" /></td></tr>
+		  	<tr><td>Judul:</td><td><input type="text" size="20" id="title" name="TITLE" /></td></tr>
+		  	<tr><td>Jumlah:</td><td><input type="text" size="20" id="amount" name="AMOUNT" /></td></tr>
+		  	<tr><td>Tanggal Mulai:</td><td>'.buildDateSelect('ASSIGNED', 89).'</td></tr>
+		  	<tr><td>Tanggal Akhir:</td><td>'.buildDateSelect('DUE', 91).'</td></tr>
+		  	<tr><td>Komentar:</td><td><input type="text" size="20" id="comment" name="COMMENT" /></td></tr>
+		  	<tr><td colspan="2" align="center"><input type="button" onclick="billing.saveFee();" style="cursor:pointer;" value="Tambah Tagihan" /> <input type="button" value="Batal" style="cursor:pointer;" onclick="billing.hideAddFee();" /></td></tr>
 		  	</table>
 		  	</form>
 		  	</div>
@@ -249,15 +249,15 @@ if($tab == null || $tab == 1){
 		  	<table style="width:550px;" cellspacing="0" cellpadding="0">
 				<thead style="border:solid 2px black;background-color:#09C;font-weight:bold;">
 				<tr align="center">
-					<td style="color:#FFF;">Title</td>
-					<td style="color:#FFF;">Amount</td>
-					<td style="color:#FFF;">Assigned</td>
-					<td style="color:#FFF;">Due</td>
-					<td style="color:#FFF;">Comment</td>
-					<td style="color:#FFF;">Action</td>
+					<td style="color:#FFF;">Judul</td>
+					<td style="color:#FFF;">Jumlah</td>
+					<td style="color:#FFF;">Tanggal Mulai</td>
+					<td style="color:#FFF;">Tanggal Akhir</td>
+					<td style="color:#FFF;">Komentar</td>
+					<td style="color:#FFF;">Aksi</td>
 				</tr>
 				</thead>
-				<tr><td colspan="6" style="background-color:#FFFF99">No Student Selected</td></tr>
+				<tr><td colspan="6" style="background-color:#FFFF99">Tidak Ada Siswa Yang Dipilih</td></tr>
 		  	</table>
 		  	</div>
 	  </div>';
@@ -269,46 +269,46 @@ if($tab == 2){
 
 	echo '<table class="tab_header_bg" cellspacing="0" style="cursor:pointer;" cellpadding="0" border="0" onclick="billing.showFees();" align="left">
 			    <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-			    <td class="drawinactivetab_header" align="left" valign="middle">Fees</td>
+			    <td class="drawinactivetab_header" align="left" valign="middle">Tagihan</td>
 			    <td class="tab_header_right"/></tr></tbody>
 			  </table>
 			  <table class="tab_header_bg_active" cellspacing="0" cellpadding="0" border="0" align="left">
 			      <tbody><tr id="tab[]" class="tab_header_bg_active">
-			  	  <td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Payments</td>
+			  	  <td class="tab_header_left_active"/><td class="drawtab_header" align="left" valign="middle">Pembayaran</td>
 			  	  <td class="tab_header_right_active"/></tr></tbody>
 			  </table>
 			  <table class="tab_header_bg" style="cursor:pointer;" onclick="billing.showMassFees();" cellspacing="0" cellpadding="0" border="0" align="left">
 			  		  <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-			  		  <td class="drawinactivetab_header" align="left" valign="middle">Mass Fees</td>
+			  		  <td class="drawinactivetab_header" align="left" valign="middle">Tagihan Massal</td>
 			  		  <td class="tab_header_right"/></tr></tbody></table>
 			  		  <table class="tab_header_bg" style="cursor:pointer;" onclick="billing.showMassPayments();" cellspacing="0" cellpadding="0" border="0" align="left">
 			  		  <tbody><tr id="tab[]" class="tab_header_bg"><td class="tab_header_left"/>
-			  		  <td class="drawinactivetab_header" align="left" valign="middle">Mass Payments</td>
+			  		  <td class="drawinactivetab_header" align="left" valign="middle">Pembayaran Massal</td>
 		  		<td class="tab_header_right"/></tr></tbody></table>
 
 			  </td></tr><tr><td class="block_topleft_corner"/><td class="block_topmiddle"/><td class="block_topright_corner"/></tr><tr><td class="block_left" rowspan="2"/><td class="block_bg"/><td class="block_right" rowspan="2"/></tr><tr><td><table class="block_bg" width="100%" cellspacing="0" cellpadding="5"><tbody><tr><td class="block_bg">';
 
 	echo '<div style="width:600px;" align="center">
-			<div>Search Students:<input type="text" id="studentSearchTB" size="30" /> <input style="cursor:pointer;" onclick="billing.searchStudents_payment();" type="button" value="Search" /></div>
+			<div>Cari Siswa:<input type="text" id="studentSearchTB" size="30" /> <input style="cursor:pointer;" onclick="billing.searchStudents_payment();" type="button" value="Cari" /></div>
 		  	<div id="searchResultsDiv"></div>
 		  	<br/>
 		  	<h3 id="selectedStuH">
-		  	Student: No Student Selected
+		  	Tidak Ada Siswa Yang Dipilih
 		  	</h3>
 		  	<div id="addPaymentDiv" style="display:none;">
 		  	<form id="newPaymentFrm">
 		  	<table>
-		  	<tr><td>Amount:</td><td><input type="text" size="20" id="amount" name="AMOUNT" /></td></tr>
-		  	<tr><td>Type:</td><td><select name="TYPE">';
+		  	<tr><td>Jumlah:</td><td><input type="text" size="20" id="amount" name="AMOUNT" /></td></tr>
+		  	<tr><td>Tipe:</td><td><select name="TYPE">';
 	$query = "select type_desc from BILLING_PAYMENT_TYPE order by type_desc";
 	$result = DBQuery($query);
 		while($row = db_fetch_row($result)){
 			echo '<option value="'.$row['TYPE_DESC'].'">'.$row['TYPE_DESC'].'</option>';
 	}
 	echo '</select></td></tr>
-		  	<tr><td>Date:</td><td>'.buildDateSelect('DATE', 89).'</td></tr>
-		  	<tr><td>Comment:</td><td><input type="text" size="20" id="comment" name="COMMENT" /></td></tr>
-		  	<tr><td colspan="2" align="center"><input type="button" onclick="billing.savePayment();" style="cursor:pointer;" value="Add Payment" /> <input type="button" value="Cancel" style="cursor:pointer;" onclick="billing.hideAddPayment();" /></td></tr>
+		  	<tr><td>Tanggal:</td><td>'.buildDateSelect('DATE', 89).'</td></tr>
+		  	<tr><td>Komentar:</td><td><input type="text" size="20" id="comment" name="COMMENT" /></td></tr>
+		  	<tr><td colspan="2" align="center"><input type="button" onclick="billing.savePayment();" style="cursor:pointer;" value="Tambah Pembayaran" /> <input type="button" value="Batal" style="cursor:pointer;" onclick="billing.hideAddPayment();" /></td></tr>
 		  	</table>
 		  	</form>
 		  	</div>
@@ -316,14 +316,14 @@ if($tab == 2){
 		  	<table style="width:550px;" cellspacing="0" cellpadding="0">
 				<thead style="border:solid 2px black;background-color:#09C;font-weight:bold;">
 				<tr align="center">
-					<td style="color:#FFF;">Amount</td>
-					<td style="color:#FFF;">Type</td>
-					<td style="color:#FFF;">Date</td>
-					<td style="color:#FFF;">Comment</td>
-					<td style="color:#FFF;">Action</td>
+					<td style="color:#FFF;">Jumlah</td>
+					<td style="color:#FFF;">Tipe</td>
+					<td style="color:#FFF;">Tanggal</td>
+					<td style="color:#FFF;">Komentar</td>
+					<td style="color:#FFF;">Aksi</td>
 				</tr>
 				</thead>
-				<tr><td colspan="6" style="background-color:#FFFF99">No Student Selected</td></tr>
+				<tr><td colspan="6" style="background-color:#FFFF99">Tidak Ada Siswa Yang Dipilih</td></tr>
 		  	</table>
 		  	</div>
 	  </div>';
