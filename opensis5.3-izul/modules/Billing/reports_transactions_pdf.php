@@ -286,11 +286,11 @@ if($auth->checkAdmin($profile, $staffId))
 				);
 	array_push($records,$row);
 
-	$tableHead = array('Student',
-					   'Fee',
-					   'Payment',
-					   'Date',
-					   'Comment');
+	$tableHead = array('Siswa',
+					   'Tagihan',
+					   'Pembayaran',
+					   'Tanggal',
+					   'Komentar');
 	//print_r($records);
 
 

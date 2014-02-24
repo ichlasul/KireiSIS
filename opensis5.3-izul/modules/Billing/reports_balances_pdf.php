@@ -157,10 +157,10 @@ if($auth->checkAdmin($profile, $staffId))
 		array_push($records,$row_);
 	}
 
-	$tableHead = array('Student',
-					   'Student Id',
-					   'Grade',
-					   'Balance');
+	$tableHead = array('Siswa',
+					   'Nomor Induk',
+					   'Kelas',
+					   'Saldo');
 	$pdf=new PDF(l);
 	$pdf->SetFont('Arial','',12);
 	$pdf->SetMargins(7,7,7);
