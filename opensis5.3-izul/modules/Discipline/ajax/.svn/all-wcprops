@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax
+END
+addDisciplineAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/addDisciplineAction.php
+END
+updateSchool.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/updateSchool.php
+END
+deleteIncidentCodes.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/deleteIncidentCodes.php
+END
+removeDisciplineAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/removeDisciplineAction.php
+END
+getCurrentCodes.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/getCurrentCodes.php
+END
+addSchool.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/addSchool.php
+END
+updateIncident.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/updateIncident.php
+END
+getDisciplineActions.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/getDisciplineActions.php
+END
+addVictim.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/addVictim.php
+END
+createIdentifier.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/createIdentifier.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/index.php
+END
+removeVictim.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/removeVictim.php
+END
+getSchools.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/getSchools.php
+END
+updateCode.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/updateCode.php
+END
+addPerpetrator.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/addPerpetrator.php
+END
+createIncident.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/createIncident.php
+END
+getDescription.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/getDescription.php
+END
+addCode.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/addCode.php
+END
+updateDisciplineAction.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/updateDisciplineAction.php
+END
+removePerpetrator.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/removePerpetrator.php
+END
+getDisciplineActionDetails.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/getDisciplineActionDetails.php
+END
+searchUsers.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/ajax/searchUsers.php
+END

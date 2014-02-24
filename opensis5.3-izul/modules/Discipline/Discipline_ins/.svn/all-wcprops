@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/Discipline_ins
+END
+conn.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/Discipline_ins/conn.php
+END
+installScripts.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/Discipline_ins/installScripts.php
+END
+uninstallScripts.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/Discipline_ins/uninstallScripts.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/Discipline_ins/index.php
+END
+installerCSS.css
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/opensis/!svn/ver/292/trunk/modules/Discipline/Discipline_ins/installerCSS.css
+END
